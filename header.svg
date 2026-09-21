@@ -1,0 +1,211 @@
+<svg width="900" height="980" viewBox="0 0 900 980" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff1a40" />
+      <stop offset="100%" stop-color="#990014" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#140406" />
+      <stop offset="100%" stop-color="#080203" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+    .title-infy { font-family: 'Impact', 'Arial Black', sans-serif; font-weight: 900; fill: url(#redGrad); filter: url(#glow); }
+    .sec-title { fill: #ffffff; font-size: 13px; font-weight: 800; letter-spacing: 3px; }
+    .card-title { fill: #ffffff; font-size: 13.5px; font-weight: 800; }
+    .card-sub { fill: #b0b5c0; font-size: 10px; font-weight: 500; }
+    .hud-text { fill: #2b2f3a; font-size: 8.5px; }
+  </style>
+
+  <rect width="900" height="980" fill="#07080b" rx="8" />
+
+  <g stroke="#1a1d26" stroke-width="1.2" fill="none">
+    <path d="M 30 90 L 110 90 L 130 110 L 130 260 L 70 320 L 70 500 L 30 540" />
+    <path d="M 40 640 L 100 640 L 120 660 L 120 780 L 50 850" />
+    <path d="M 870 90 L 790 90 L 770 110 L 770 260 L 830 320 L 830 500 L 870 540" />
+    <path d="M 860 640 L 800 640 L 780 660 L 780 780 L 830 830" />
+    <circle cx="130" cy="110" r="3" fill="#ff0033" />
+    <circle cx="770" cy="110" r="3" fill="#ff0033" />
+  </g>
+
+  <text x="25" y="45" class="mono hud-text">SYS_ID: 0x9028_ROOT</text>
+  <text x="25" y="58" class="mono hud-text">HOST: blackarch-core</text>
+  <text x="25" y="71" class="mono hud-text">LOG: /dev/null</text>
+  <text x="765" y="45" class="mono hud-text">MEM: 0xDEADBEEF</text>
+  <text x="765" y="58" class="mono hud-text">TRACE: UNTRACEABLE</text>
+  <text x="765" y="71" class="mono hud-text">PROXIES: CHAINED</text>
+
+  <g id="header-identity">
+    <text x="450" y="115" text-anchor="middle" class="title-infy" font-size="86" letter-spacing="4">infy</text>
+    <text x="450" y="152" text-anchor="middle" class="mono" font-size="14" font-weight="600" fill="#ffffff" filter="url(#subtle-glow)">
+      <tspan fill="#ff0033" font-weight="800">infy</tspan> // black hat &amp; low-level dev
+    </text>
+  </g>
+
+  <g id="section-about">
+    <path d="M 180 185 L 390 185 M 510 185 L 720 185" stroke="#ff0033" stroke-width="1.2" stroke-opacity="0.7" />
+    <text x="450" y="189" text-anchor="middle" class="mono sec-title">ABOUT</text>
+    
+    <g transform="translate(250, 215)" class="mono" font-size="13">
+      <circle cx="10" cy="6" r="3" fill="#ff0033" filter="url(#subtle-glow)" />
+      <text x="28" y="10" fill="#ffffff" font-weight="700">Role</text>
+      <text x="90" y="10" fill="#666666">-</text>
+      <text x="110" y="10" fill="#e1e4ea">Black Hat + Low-Level Exploit Developer</text>
+
+      <circle cx="10" cy="30" r="3" fill="#ff0033" filter="url(#subtle-glow)" />
+      <text x="28" y="34" fill="#ffffff" font-weight="700">Mindset</text>
+      <text x="90" y="34" fill="#666666">-</text>
+      <text x="110" y="34" fill="#e1e4ea">Quebrar o inquebrável // 0 Logs</text>
+
+      <circle cx="10" cy="54" r="3" fill="#ff0033" filter="url(#subtle-glow)" />
+      <text x="28" y="58" fill="#ffffff" font-weight="700">Target</text>
+      <text x="90" y="58" fill="#666666">-</text>
+      <text x="110" y="58" fill="#e1e4ea">Binary Exploitation &amp; Reverse Engineering</text>
+
+      <circle cx="10" cy="78" r="3" fill="#ff0033" filter="url(#subtle-glow)" />
+      <text x="28" y="82" fill="#ffffff" font-weight="700">Status</text>
+      <text x="90" y="82" fill="#666666">-</text>
+      <text x="110" y="82" fill="#ff1a40" font-weight="800">Shadow / Operating in Kernel Space</text>
+    </g>
+  </g>
+
+  <g id="section-os" transform="translate(0, 335)">
+    <path d="M 170 0 L 325 0 M 575 0 L 730 0" stroke="#ff0033" stroke-width="1.2" stroke-opacity="0.7" />
+    <text x="450" y="4" text-anchor="middle" class="mono sec-title">OPERATIONAL SYSTEMS</text>
+
+    <g transform="translate(195, 20)">
+      <rect width="155" height="42" rx="6" fill="#0b0c10" stroke="#ff0033" stroke-width="1.2" />
+      <g transform="translate(12, 8)">
+        <polygon points="13,2 24,24 13,18 2,24" fill="#ff0033" />
+        <circle cx="13" cy="15" r="2.5" fill="#0b0c10" />
+        <circle cx="13" cy="15" r="1.2" fill="#ffffff" />
+      </g>
+      <text x="46" y="26" class="mono" font-size="13" font-weight="700" fill="#ffffff">BlackArch</text>
+    </g>
+
+    <g transform="translate(372, 20)">
+      <rect width="155" height="42" rx="6" fill="#0b0c10" stroke="#1793d1" stroke-width="1.2" />
+      <image href="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/archlinux.svg" x="14" y="10" width="22" height="22" filter="invert(53%) sepia(85%) saturate(836%) hue-rotate(167deg) brightness(96%) contrast(92%)" />
+      <text x="46" y="26" class="mono" font-size="13" font-weight="700" fill="#ffffff">Arch Linux</text>
+    </g>
+
+    <g transform="translate(550, 20)">
+      <rect width="155" height="42" rx="6" fill="#0b0c10" stroke="#ff0033" stroke-width="1.2" />
+      <image href="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/kalilinux.svg" x="14" y="10" width="22" height="22" filter="invert(14%) sepia(99%) saturate(7180%) hue-rotate(346deg) brightness(101%) contrast(106%)" />
+      <text x="46" y="26" class="mono" font-size="13" font-weight="800" fill="#ffffff">Kali Linux</text>
+    </g>
+  </g>
+
+  <g id="section-langs" transform="translate(0, 440)">
+    <path d="M 170 0 L 335 0 M 565 0 L 730 0" stroke="#ff0033" stroke-width="1.2" stroke-opacity="0.7" />
+    <text x="450" y="4" text-anchor="middle" class="mono sec-title">FAVORITE LANGUAGES</text>
+
+    <g transform="translate(130, 24)">
+      <rect width="200" height="60" rx="6" fill="url(#cardGrad)" stroke="#ff0033" stroke-width="1.2" />
+      <rect x="0" y="0" width="50" height="60" rx="6" fill="#ff0033" />
+      <image href="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/php.svg" x="10" y="15" width="30" height="30" filter="brightness(0) invert(1)" />
+      <text x="58" y="26" class="mono card-title">PHP</text>
+      <text x="58" y="44" class="mono card-sub">Web Exploits &amp; RCE</text>
+    </g>
+
+    <g transform="translate(350, 24)">
+      <rect width="200" height="60" rx="6" fill="url(#cardGrad)" stroke="#ff0033" stroke-width="1.2" />
+      <rect x="0" y="0" width="50" height="60" rx="6" fill="#ff0033" />
+      <image href="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/go.svg" x="8" y="16" width="34" height="28" filter="brightness(0) invert(1)" />
+      <text x="58" y="26" class="mono card-title">Go / Golang</text>
+      <text x="58" y="44" class="mono card-sub">Custom C2 &amp; Tools</text>
+    </g>
+
+    <g transform="translate(570, 24)">
+      <rect width="200" height="60" rx="6" fill="url(#cardGrad)" stroke="#ff0033" stroke-width="1.2" />
+      <rect x="0" y="0" width="50" height="60" rx="6" fill="#ff0033" />
+      <image href="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/assemblyscript.svg" x="11" y="16" width="28" height="28" filter="brightness(0) invert(1)" />
+      <text x="58" y="26" class="mono card-title">Assembly</text>
+      <text x="58" y="44" class="mono card-sub">x86_64 Shellcodes</text>
+    </g>
+
+    <g transform="translate(130, 96)">
+      <rect width="200" height="60" rx="6" fill="url(#cardGrad)" stroke="#ff0033" stroke-width="1.2" />
+      <rect x="0" y="0" width="50" height="60" rx="6" fill="#ff0033" />
+      <image href="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/c.svg" x="11" y="16" width="28" height="28" filter="brightness(0) invert(1)" />
+      <text x="58" y="26" class="mono card-title">C</text>
+      <text x="58" y="44" class="mono card-sub">Low-Level Memory</text>
+    </g>
+
+    <g transform="translate(350, 96)">
+      <rect width="200" height="60" rx="6" fill="url(#cardGrad)" stroke="#ff0033" stroke-width="1.2" />
+      <rect x="0" y="0" width="50" height="60" rx="6" fill="#ff0033" />
+      <image href="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/cplusplus.svg" x="11" y="16" width="28" height="28" filter="brightness(0) invert(1)" />
+      <text x="58" y="26" class="mono card-title">C++</text>
+      <text x="58" y="44" class="mono card-sub">Reverse Engineering</text>
+    </g>
+
+    <g transform="translate(570, 96)">
+      <rect width="200" height="60" rx="6" fill="url(#cardGrad)" stroke="#ff0033" stroke-width="1.2" />
+      <rect x="0" y="0" width="50" height="60" rx="6" fill="#ff0033" />
+      <image href="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/csharp.svg" x="11" y="16" width="28" height="28" filter="brightness(0) invert(1)" />
+      <text x="58" y="26" class="mono card-title">C#</text>
+      <text x="58" y="44" class="mono card-sub">Loaders &amp; Crypters</text>
+    </g>
+  </g>
+
+  <g id="section-frameworks" transform="translate(0, 640)">
+    <path d="M 140 0 L 260 0 M 640 0 L 760 0" stroke="#ff0033" stroke-width="1.2" stroke-opacity="0.7" />
+    <text x="450" y="4" text-anchor="middle" class="mono sec-title">OFFENSIVE FRAMEWORKS &amp; TOOLING</text>
+
+    <g transform="translate(190, 26)" class="mono" font-size="13">
+      <circle cx="10" cy="10" r="3" fill="#ff0033" filter="url(#subtle-glow)" />
+      <text x="25" y="14" fill="#e1e4ea">Reverse Engineering</text>
+      
+      <circle cx="10" cy="38" r="3" fill="#ff0033" filter="url(#subtle-glow)" />
+      <text x="25" y="42" fill="#e1e4ea">Exploit Development (ROP / Buffer)</text>
+    </g>
+
+    <g transform="translate(520, 26)" class="mono" font-size="13">
+      <circle cx="10" cy="10" r="3" fill="#ff0033" filter="url(#subtle-glow)" />
+      <text x="25" y="14" fill="#e1e4ea">Memory Injection &amp; Hooking</text>
+      
+      <circle cx="10" cy="38" r="3" fill="#ff0033" filter="url(#subtle-glow)" />
+      <text x="25" y="42" fill="#e1e4ea">Network Analysis &amp; Infiltration</text>
+    </g>
+  </g>
+
+  <g id="section-footer" transform="translate(0, 780)">
+    <path d="M 160 0 L 740 0" stroke="#1d2029" stroke-width="1.2" />
+
+    <g transform="translate(250, 28)">
+      <rect width="185" height="44" rx="6" fill="#0c0d12" stroke="#ff0033" stroke-width="1.2" />
+      <image href="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/telegram.svg" x="22" y="11" width="22" height="22" filter="invert(14%) sepia(99%) saturate(7180%) hue-rotate(346deg) brightness(101%) contrast(106%)" />
+      <text x="56" y="28" class="mono" font-size="13" font-weight="700" fill="#ffffff">Telegram</text>
+    </g>
+
+    <g transform="translate(465, 28)">
+      <rect width="185" height="44" rx="6" fill="#0c0d12" stroke="#ff0033" stroke-width="1.2" />
+      <image href="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/protonmail.svg" x="22" y="11" width="22" height="22" filter="invert(14%) sepia(99%) saturate(7180%) hue-rotate(346deg) brightness(101%) contrast(106%)" />
+      <text x="56" y="28" class="mono" font-size="13" font-weight="700" fill="#ffffff">ProtonMail</text>
+    </g>
+
+    <text x="450" y="125" text-anchor="middle" class="mono hud-text" fill="#444855">
+      [!] SECURE TRANSMISSION ESTABLISHED // 0xDEADBEEF
+    </text>
+  </g>
+</svg>
